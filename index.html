@@ -7,50 +7,66 @@
 <title>FreeStudio AI — Create, Imagine, Bring to Life</title>
 <style>
 :root{--bg:#050b16;--panel:#0a1729;--line:#1b3150;--text:#f5f7ff;--muted:#a9bbd8;--purple:#7657ff;--pink:#ed45c7;--blue:#5ca9ff}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% 0%,#172343 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;color:inherit}.wrap{max-width:1200px;margin:auto;padding:0 20px}.topbar{border-bottom:1px solid #182943;background:#050b16eF;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}.nav{min-height:76px;display:flex;align-items:center;gap:22px}.brand{display:flex;align-items:center;gap:11px;margin-right:auto}.logo{font-size:32px;color:#c17aff}.brand strong{display:block;font-size:21px;letter-spacing:-.5px}.brand small{color:var(--muted)}.navlinks{display:flex;gap:8px}.navlinks button,.pill{background:transparent;border:0;color:var(--muted);padding:10px 13px;border-radius:12px}.navlinks button.active,.navlinks button:hover{color:white;background:#152541}.pill{border:1px solid #304a70;color:#dce8ff;white-space:nowrap}.hero{margin:18px 0 22px;border:1px solid var(--line);border-radius:22px;overflow:hidden;min-height:300px;position:relative;background:linear-gradient(90deg,#071323 0%,#071323ed 32%,#07132340 75%),linear-gradient(135deg,#192e50,#51377c 55%,#e06ca7);display:flex;align-items:center}.hero:after{content:"";position:absolute;right:4%;top:0;bottom:0;width:48%;background:radial-gradient(circle at 60% 35%,#ffd4a7 0,transparent 5%),radial-gradient(ellipse at 55% 70%,#e78b9c 0,transparent 35%),linear-gradient(140deg,transparent 20%,#4e416c 60%,#192d4c);opacity:.8;clip-path:polygon(30% 0,100% 0,100% 100%,0 100%);pointer-events:none}.hero-content{padding:36px;max-width:660px;position:relative;z-index:1}.eyebrow{color:#bd78ff;font-weight:800;letter-spacing:.07em;font-size:12px}.hero h1{font-size:clamp(32px,5vw,49px);line-height:1.06;letter-spacing:-1.5px;margin:12px 0}.gradient{background:linear-gradient(90deg,#8c72ff,#f04cc6);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:#d0dcf0;margin:12px 0 22px}.tags{display:flex;gap:8px;flex-wrap:wrap}.tag{border:1px solid #3b4d70;background:#0a1739d9;padding:9px 12px;border-radius:10px;font-size:12px}.modes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}.mode{display:flex;align-items:center;gap:13px;text-align:left;padding:17px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(135deg,#0d1b2e,#091424);min-width:0}.mode .ico{font-size:27px;color:#91baff}.mode b{display:block;font-size:14px}.mode small{display:block;color:var(--muted);font-size:12px;margin-top:3px}.mode.active{background:linear-gradient(120deg,#7454ff,#d743c7);border-color:#c27bff}.mode.active .ico,.mode.active small{color:white}.studio{border:1px solid #243b5b;background:linear-gradient(145deg,#0b1729,#07111f);border-radius:19px;padding:22px;margin-bottom:24px}.label{font-weight:700;margin-bottom:10px;display:block}.textarea{width:100%;min-height:90px;resize:vertical;border:1px solid #2a4265;background:#050e1b;color:white;border-radius:12px;padding:14px;outline:none}.textarea:focus,input:focus,select:focus{border-color:#9878ff;outline:1px solid #7358ff55}.controls{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:17px 0}.field label{display:block;font-size:13px;margin-bottom:8px;color:#e1eaff}.field select,.field input{width:100%;background:#071222;border:1px solid #2b4264;color:#eaf1ff;border-radius:10px;padding:12px}.generate{width:100%;border:0;border-radius:12px;padding:15px;font-weight:800;font-size:17px;background:linear-gradient(90deg,#7357ff,#ee49c6);box-shadow:0 8px 28px #6b43ff24}.generate:disabled{opacity:.65;cursor:wait}.note{text-align:center;color:var(--muted);font-size:12px;margin-top:10px}.upload{display:none;border:1px dashed #49658b;padding:14px;border-radius:12px;margin:12px 0;color:var(--muted)}.upload input{max-width:100%}.status{display:none;margin-top:14px;padding:14px;border:1px solid #3b5275;border-radius:12px;color:#d7e5ff;background:#0b1b30}.output-box{margin-top:12px;text-align:center}.output-box img{max-width:100%;max-height:540px;border-radius:12px;border:1px solid #2e486d;display:block;margin:10px auto}.download-btn{display:inline-block;margin-top:8px;padding:9px 16px;border-radius:10px;background:#1c3254;border:1px solid #496ea3;color:#fff;text-decoration:none;font-weight:600;font-size:13px}.examples-head{display:flex;justify-content:space-between;align-items:center;margin:26px 4px 12px}.examples-head h2{font-size:17px;margin:0}.examples{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.sample{border:1px solid var(--line);background:#091526;border-radius:14px;overflow:hidden}.thumb{height:135px;display:grid;place-items:center;font-size:42px;background:linear-gradient(135deg,#203a60,#a16e9e 55%,#f5b18b);position:relative}.sample:nth-child(2) .thumb{background:linear-gradient(135deg,#1c3148,#6f739d,#d4a8aa)}.sample:nth-child(3) .thumb{background:linear-gradient(135deg,#173d35,#a48b4b,#25374a)}.sample:nth-child(4) .thumb{background:linear-gradient(135deg,#442c38,#c48c64,#182840)}.play{position:absolute;bottom:9px;left:10px;background:#07101dcc;border:1px solid #ffffff55;border-radius:50%;width:29px;height:29px}.sample-body{padding:11px}.sample-body b{display:block;font-size:13px}.sample-body small{color:var(--muted)}footer{margin-top:35px;border-top:1px solid #172944;padding:20px 0;color:var(--muted);font-size:12px}.foot{display:flex;gap:20px;justify-content:space-between;flex-wrap:wrap}.foot strong{color:white;font-size:15px}@media(max-width:800px){.nav{gap:8px;min-height:68px}.navlinks{gap:0}.navlinks button{font-size:12px;padding:8px}.navlinks button:nth-child(3),.navlinks button:nth-child(4){display:none}.pill{font-size:12px;padding:8px}.hero{min-height:300px}.hero-content{padding:24px}.hero:after{width:65%;opacity:.35}.modes{grid-template-columns:repeat(2,1fr)}.controls{grid-template-columns:repeat(2,1fr)}.examples{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.wrap{padding:0 12px}.brand strong{font-size:17px}.brand small{font-size:10px}.logo{font-size:27px}.navlinks button{padding:7px;font-size:11px}.pill{display:none}.hero{margin-top:12px}.hero-content{padding:20px}.hero h1{font-size:34px}.hero p{font-size:14px}.tag{font-size:11px;padding:8px}.mode{padding:12px;gap:9px}.mode .ico{font-size:22px}.mode b{font-size:12px}.mode small{font-size:11px}.studio{padding:15px}.controls{gap:10px}.field label{font-size:12px}.field select{padding:10px;font-size:12px}.thumb{height:110px}.examples{gap:9px}}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% 0%,#172343 0,transparent 38%),var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;color:inherit}.wrap{max-width:1200px;margin:auto;padding:0 20px}.topbar{border-bottom:1px solid #182943;background:#050b16eF;position:sticky;top:0;z-index:5;backdrop-filter:blur(12px)}.nav{min-height:76px;display:flex;align-items:center;gap:22px}.brand{display:flex;align-items:center;gap:11px;margin-right:auto}.logo{font-size:32px;color:#c17aff}.brand strong{display:block;font-size:21px;letter-spacing:-.5px}.brand small{color:var(--muted)}.navlinks{display:flex;gap:8px}.navlinks button,.pill{background:transparent;border:0;color:var(--muted);padding:10px 13px;border-radius:12px}.navlinks button.active,.navlinks button:hover{color:white;background:#152541}.pill{border:1px solid #304a70;color:#dce8ff;white-space:nowrap}.hero{margin:18px 0 22px;border:1px solid var(--line);border-radius:22px;overflow:hidden;min-height:300px;position:relative;background:linear-gradient(90deg,#071323 0%,#071323ed 32%,#07132340 75%),linear-gradient(135deg,#192e50,#51377c 55%,#e06ca7);display:flex;align-items:center}.hero:after{content:"";position:absolute;right:4%;top:0;bottom:0;width:48%;background:radial-gradient(circle at 60% 35%,#ffd4a7 0,transparent 5%),radial-gradient(ellipse at 55% 70%,#e78b9c 0,transparent 35%),linear-gradient(140deg,transparent 20%,#4e416c 60%,#192d4c);opacity:.8;clip-path:polygon(30% 0,100% 0,100% 100%,0 100%);pointer-events:none}.hero-content{padding:36px;max-width:660px;position:relative;z-index:1}.eyebrow{color:#bd78ff;font-weight:800;letter-spacing:.07em;font-size:12px}.hero h1{font-size:clamp(32px,5vw,49px);line-height:1.06;letter-spacing:-1.5px;margin:12px 0}.gradient{background:linear-gradient(90deg,#8c72ff,#f04cc6);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:#d0dcf0;margin:12px 0 22px}.tags{display:flex;gap:8px;flex-wrap:wrap}.tag{border:1px solid #3b4d70;background:#0a1739d9;padding:9px 12px;border-radius:10px;font-size:12px}.modes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}.mode{display:flex;align-items:center;gap:13px;text-align:left;padding:17px;border:1px solid var(--line);border-radius:17px;background:linear-gradient(135deg,#0d1b2e,#091424);min-width:0}.mode .ico{font-size:27px;color:#91baff}.mode b{display:block;font-size:14px}.mode small{display:block;color:var(--muted);font-size:12px;margin-top:3px}.mode.active{background:linear-gradient(120deg,#7454ff,#d743c7);border-color:#c27bff}.mode.active .ico,.mode.active small{color:white}.studio{border:1px solid #243b5b;background:linear-gradient(145deg,#0b1729,#07111f);border-radius:19px;padding:22px;margin-bottom:24px}.label{font-weight:700;margin-bottom:10px;display:block}.textarea{width:100%;min-height:90px;resize:vertical;border:1px solid #2a4265;background:#050e1b;color:white;border-radius:12px;padding:14px;outline:none}.textarea:focus,input:focus,select:focus{border-color:#9878ff;outline:1px solid #7358ff55}.controls{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:17px 0}.field label{display:block;font-size:13px;margin-bottom:8px;color:#e1eaff}.field select,.field input{width:100%;background:#071222;border:1px solid #2b4264;color:#eaf1ff;border-radius:10px;padding:12px}.api-bar{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:16px;padding:13px;border:1px solid #223858;border-radius:12px;background:#06101e}.generate{width:100%;border:0;border-radius:12px;padding:15px;font-weight:800;font-size:17px;background:linear-gradient(90deg,#7357ff,#ee49c6);box-shadow:0 8px 28px #6b43ff24}.generate:disabled{opacity:.65;cursor:wait}.note{text-align:center;color:var(--muted);font-size:12px;margin-top:10px}.upload{display:none;border:1px dashed #49658b;padding:14px;border-radius:12px;margin:12px 0;color:var(--muted)}.upload input{max-width:100%}.status{display:none;margin-top:14px;padding:14px;border:1px solid #3b5275;border-radius:12px;color:#d7e5ff;background:#0b1b30}.output-box{margin-top:12px;text-align:center}.output-box img,.output-box video{max-width:100%;max-height:540px;border-radius:12px;border:1px solid #2e486d;display:block;margin:10px auto}.download-btn{display:inline-block;margin-top:8px;padding:9px 16px;border-radius:10px;background:#1c3254;border:1px solid #496ea3;color:#fff;text-decoration:none;font-weight:600;font-size:13px}.examples-head{display:flex;justify-content:space-between;align-items:center;margin:26px 4px 12px}.examples-head h2{font-size:17px;margin:0}.examples{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.sample{border:1px solid var(--line);background:#091526;border-radius:14px;overflow:hidden}.thumb{height:135px;display:grid;place-items:center;font-size:42px;background:linear-gradient(135deg,#203a60,#a16e9e 55%,#f5b18b);position:relative}.sample:nth-child(2) .thumb{background:linear-gradient(135deg,#1c3148,#6f739d,#d4a8aa)}.sample:nth-child(3) .thumb{background:linear-gradient(135deg,#173d35,#a48b4b,#25374a)}.sample:nth-child(4) .thumb{background:linear-gradient(135deg,#442c38,#c48c64,#182840)}.play{position:absolute;bottom:9px;left:10px;background:#07101dcc;border:1px solid #ffffff55;border-radius:50%;width:29px;height:29px}.sample-body{padding:11px}.sample-body b{display:block;font-size:13px}.sample-body small{color:var(--muted)}footer{margin-top:35px;border-top:1px solid #172944;padding:20px 0;color:var(--muted);font-size:12px}.foot{display:flex;gap:20px;justify-content:space-between;flex-wrap:wrap}.foot strong{color:white;font-size:15px}@media(max-width:800px){.nav{gap:8px;min-height:68px}.navlinks{gap:0}.navlinks button{font-size:12px;padding:8px}.navlinks button:nth-child(3),.navlinks button:nth-child(4){display:none}.pill{font-size:12px;padding:8px}.hero{min-height:300px}.hero-content{padding:24px}.hero:after{width:65%;opacity:.35}.modes{grid-template-columns:repeat(2,1fr)}.controls,.api-bar{grid-template-columns:repeat(2,1fr)}.examples{grid-template-columns:repeat(2,1fr)}}@media(max-width:480px){.wrap{padding:0 12px}.brand strong{font-size:17px}.brand small{font-size:10px}.logo{font-size:27px}.navlinks button{padding:7px;font-size:11px}.pill{display:none}.hero{margin-top:12px}.hero-content{padding:20px}.hero h1{font-size:34px}.hero p{font-size:14px}.tag{font-size:11px;padding:8px}.mode{padding:12px;gap:9px}.mode .ico{font-size:22px}.mode b{font-size:12px}.mode small{font-size:11px}.studio{padding:15px}.controls,.api-bar{grid-template-columns:1fr;gap:10px}.field label{font-size:12px}.field select{padding:10px;font-size:12px}.thumb{height:110px}.examples{gap:9px}}
 </style>
 </head>
 <body>
 <header class="topbar"><div class="wrap nav">
   <div class="brand"><span class="logo">✦</span><div><strong>FreeStudio <span class="gradient">AI</span></strong><small>Create · Imagine · Bring to Life</small></div></div>
   <nav class="navlinks"><button class="active" data-nav="Home">⌂ Home</button><button data-nav="Generate">✧ Generate</button><button data-nav="My Creations">▣ My Creations</button><button data-nav="Explore">◉ Explore</button></nav>
-  <span class="pill">♔ 100% Free</span>
+  <span class="pill">♔ Image + Video Studio</span>
 </div></header>
 <main class="wrap">
-<section class="hero"><div class="hero-content"><div class="eyebrow">AI VIDEO & IMAGE STUDIO</div><h1>Turn Your Ideas Into<br><span class="gradient">Amazing Creations</span></h1><p>Create AI images, storyboards, and video concepts.<br>100% free in your browser — no login or API keys required.</p><div class="tags"><span class="tag">✿ AI Image Generator (Live)</span><span class="tag">▣ Text to Video</span><span class="tag">▧ Image to Video</span><span class="tag">✦ Micro-Drama</span></div></div></section>
+<section class="hero"><div class="hero-content"><div class="eyebrow">AI VIDEO & IMAGE STUDIO</div><h1>Turn Your Ideas Into<br><span class="gradient">Amazing Videos & Art</span></h1><p>Generate AI images instantly for free, or connect your Hugging Face API token to render real MP4 AI videos directly in your browser.</p><div class="tags"><span class="tag">▣ Text to Video (MP4)</span><span class="tag">▧ Image to Video</span><span class="tag">✿ AI Image Generator (No Key)</span><span class="tag">✦ Micro-Drama</span></div></div></section>
 <section class="modes" aria-label="Choose a generation mode">
-<button class="mode active" data-mode="AI Image Generator"><span class="ico">✿</span><span><b>AI Image Generator</b><small>Create stunning images (Live)</small></span></button>
-<button class="mode" data-mode="Text to Video"><span class="ico">▣</span><span><b>Text to Video</b><small>Generate video keyframes</small></span></button>
+<button class="mode active" data-mode="Text to Video"><span class="ico">▣</span><span><b>Text to Video</b><small>Render real MP4 video</small></span></button>
 <button class="mode" data-mode="Image to Video"><span class="ico">▧</span><span><b>Image to Video</b><small>Animate your photos</small></span></button>
-<button class="mode" data-mode="Micro-Drama"><span class="ico">▣</span><span><b>Micro-Drama</b><small>Short scenes, big stories</small></span></button>
+<button class="mode" data-mode="AI Image Generator"><span class="ico">✿</span><span><b>AI Image Generator</b><small>100% Free · No API key</small></span></button>
+<button class="mode" data-mode="Micro-Drama"><span class="ico">▣</span><span><b>Micro-Drama</b><small>Short cinematic video</small></span></button>
 </section>
 <section class="studio" id="studio">
 <label class="label" for="prompt">✦   Enter your prompt</label>
-<textarea id="prompt" class="textarea" maxlength="1000" placeholder="Describe the image you want to create..."></textarea>
+<textarea id="prompt" class="textarea" maxlength="1000" placeholder="Describe the video you want to create..."></textarea>
 <div id="uploadBox" class="upload">Choose an image to animate: <input id="imageFile" type="file" accept="image/*"><div id="fileName"></div></div>
 <div class="controls">
-<div class="field"><label for="length">◷   Video length</label><select id="length" disabled style="opacity:.5"><option>5 seconds</option><option>8 seconds</option><option>10 seconds</option><option>15 seconds</option></select></div>
+<div class="field"><label for="length">◷   Video length</label><select id="length"><option>5 seconds</option><option>8 seconds</option><option>10 seconds</option></select></div>
 <div class="field"><label for="ratio">▰   Aspect ratio</label><select id="ratio"><option value="16:9">16:9 Landscape</option><option value="9:16">9:16 Portrait</option><option value="1:1">1:1 Square</option><option value="4:3">4:3 Classic</option></select></div>
-<div class="field"><label for="style">✧   Style</label><select id="style"><option>Realistic</option><option>Cinematic</option><option>Anime</option><option>Fantasy</option><option>3D Animation</option><option>Documentary</option></select></div>
-<div class="field"><label for="quality">◇   Model</label><select id="quality"><option value="flux">Flux (High Quality)</option><option value="turbo">Turbo (Fast)</option></select></div>
+<div class="field"><label for="style">✧   Style</label><select id="style"><option>Cinematic</option><option>Realistic</option><option>Anime</option><option>Fantasy</option><option>3D Animation</option><option>Documentary</option></select></div>
+<div class="field"><label for="quality">◇   Engine / Model</label><select id="quality"><option value="Wan-AI/Wan2.1-T2V-1.3B">Wan 2.1 Video (HF API)</option><option value="Lightricks/LTX-Video">LTX-Video (HF API)</option><option value="flux">Flux Image (No Key)</option></select></div>
+</div>
+<div class="api-bar" id="apiBar">
+  <div class="field">
+    <label for="hfToken">🔑 Hugging Face Token (Required for Video modes)</label>
+    <input id="hfToken" type="password" placeholder="Paste hf_... token (saved locally in your browser)">
+  </div>
+  <div class="field">
+    <label for="customEndpoint">🌐 Custom Video Endpoint URL (Optional — Colab/Gradio)</label>
+    <input id="customEndpoint" type="url" placeholder="Leave blank to use Hugging Face Inference API">
+  </div>
 </div>
 <button class="generate" id="generate">✦   Generate</button>
-<div class="note">Powered by free browser AI inference · No account required</div>
+<div class="note">AI Image mode works with zero setup · Video modes use your Hugging Face token or custom Colab URL</div>
 <div class="status" id="status" role="status"></div>
 </section>
 <div class="examples-head"><h2>✦   Try These Examples</h2><button id="viewMore" style="background:none;border:0;color:#b7caff">View more →</button></div>
 <section class="examples">
-<article class="sample"><div class="thumb">🏰<button class="play" data-mode-target="AI Image Generator" data-example="A lone adventurer approaches a magical castle at sunrise, epic cinematic fantasy">▶</button></div><div class="sample-body"><b>Epic fantasy scene</b><small>AI Image · Click ▶ to load</small></div></article>
-<article class="sample"><div class="thumb">🌧️<button class="play" data-mode-target="AI Image Generator" data-example="A woman under an umbrella in a rainy neon city at night, cinematic realistic lighting">▶</button></div><div class="sample-body"><b>Rainy city portrait</b><small>AI Image · Click ▶ to load</small></div></article>
-<article class="sample"><div class="thumb">🐅<button class="play" data-mode-target="AI Image Generator" data-example="A Bengal tiger walking through a misty green forest, wildlife documentary style">▶</button></div><div class="sample-body"><b>Wildlife documentary</b><small>AI Image · Click ▶ to load</small></div></article>
-<article class="sample"><div class="thumb">🎬<button class="play" data-mode-target="Micro-Drama" data-example="Two characters share an emotional reunion in a warm lantern-lit street, short film scene">▶</button></div><div class="sample-body"><b>Emotional micro-drama</b><small>Micro-Drama · Click ▶ to load</small></div></article>
+<article class="sample"><div class="thumb">🏰<button class="play" data-mode-target="Text to Video" data-example="A lone adventurer approaches a magical castle at sunrise, camera slowly pushing forward, epic cinematic fantasy">▶</button></div><div class="sample-body"><b>Epic fantasy scene</b><small>Text to Video · Click ▶ to load</small></div></article>
+<article class="sample"><div class="thumb">🌧️<button class="play" data-mode-target="Image to Video" data-example="Subtle rain falling, neon reflections shimmering, gentle camera motion">▶</button></div><div class="sample-body"><b>Rainy city portrait</b><small>Image to Video · Click ▶ to load</small></div></article>
+<article class="sample"><div class="thumb">🐅<button class="play" data-mode-target="AI Image Generator" data-example="A Bengal tiger walking through a misty green forest, wildlife documentary style">▶</button></div><div class="sample-body"><b>Wildlife documentary</b><small>AI Image (No Key) · Click ▶ to load</small></div></article>
+<article class="sample"><div class="thumb">🎬<button class="play" data-mode-target="Micro-Drama" data-example="Two characters share an emotional reunion in a warm lantern-lit street, shallow depth of field, short film scene">▶</button></div><div class="sample-body"><b>Emotional micro-drama</b><small>Micro-Drama · Click ▶ to load</small></div></article>
 </section>
-<footer><div class="foot"><div><strong>FreeStudio AI</strong><br>Create · Imagine · Bring to Life</div><span>◎ Designed for iPhone & mobile</span><span>♡ Built for creators</span><span>100% Free Client-Side AI Studio</span></div></footer>
+<footer><div class="foot"><div><strong>FreeStudio AI</strong><br>Create · Imagine · Bring to Life</div><span>◎ Designed for iPhone & mobile</span><span>♡ Built for creators</span><span>Image + Video API Studio</span></div></footer>
 </main>
 <script>
-const modes=[...document.querySelectorAll('.mode')], promptBox=document.querySelector('#prompt'), uploadBox=document.querySelector('#uploadBox'), statusBox=document.querySelector('#status');
-let currentMode='AI Image Generator';
+const modes=[...document.querySelectorAll('.mode')], promptBox=document.querySelector('#prompt'), uploadBox=document.querySelector('#uploadBox'), statusBox=document.querySelector('#status'), tokenInput=document.querySelector('#hfToken'), customUrlInput=document.querySelector('#customEndpoint');
+let currentMode='Text to Video';
 const savedCreations=[];
+
+// Restore saved token locally in user's own browser only
+tokenInput.value=localStorage.getItem('fs_hf_token')||'';
+customUrlInput.value=localStorage.getItem('fs_custom_url')||'';
+tokenInput.addEventListener('input',()=>localStorage.setItem('fs_hf_token',tokenInput.value.trim()));
+customUrlInput.addEventListener('input',()=>localStorage.setItem('fs_custom_url',customUrlInput.value.trim()));
 
 function setMode(mode){
   currentMode=mode;
@@ -59,7 +75,10 @@ function setMode(mode){
   const isImage=mode==='AI Image Generator';
   document.querySelector('#length').disabled=isImage;
   document.querySelector('#length').style.opacity=isImage?'.5':'1';
-  promptBox.placeholder=mode==='Micro-Drama'?'Describe your story, characters, setting, and mood...':isImage?'Describe the image you want to create...':mode==='Image to Video'?'Describe how the uploaded image should move...':'Describe the video scene you want to create...';
+  document.querySelector('#apiBar').style.opacity=isImage?'.55':'1';
+  if(isImage) document.querySelector('#quality').value='flux';
+  else if(document.querySelector('#quality').value==='flux') document.querySelector('#quality').value='Wan-AI/Wan2.1-T2V-1.3B';
+  promptBox.placeholder=mode==='Micro-Drama'?'Describe your story, characters, setting, and mood...':isImage?'Describe the image you want to create (no API token needed)...':mode==='Image to Video'?'Describe how the uploaded image should move...':'Describe the video you want to create...';
   statusBox.style.display='none';
 }
 
@@ -75,7 +94,7 @@ document.querySelectorAll('[data-nav]').forEach(b=>b.addEventListener('click',()
     if(!savedCreations.length){
       statusBox.textContent='No creations yet in this session. Enter a prompt above and click Generate!';
     } else {
-      statusBox.innerHTML='<strong>Your Session Creations ('+savedCreations.length+'):</strong><div class="output-box">'+savedCreations.map(item=>'<div style="margin-bottom:14px"><small>'+item.prompt+'</small><img src="'+item.url+'" alt="Generated creation"><a class="download-btn" href="'+item.url+'" download="freestudio-ai.jpg" target="_blank">⬇ Download Image</a></div>').join('')+'</div>';
+      statusBox.innerHTML='<strong>Your Session Creations ('+savedCreations.length+'):</strong><div class="output-box">'+savedCreations.map(item=>'<div style="margin-bottom:16px"><small>'+item.prompt+'</small>'+(item.type==='video'?'<video src="'+item.url+'" controls loop autoplay muted playsinline></video><a class="download-btn" href="'+item.url+'" download="freestudio-ai.mp4">⬇ Download MP4</a>':'<img src="'+item.url+'" alt="Generated creation"><a class="download-btn" href="'+item.url+'" download="freestudio-ai.jpg" target="_blank">⬇ Download Image</a>')+'</div>').join('')+'</div>';
     }
     document.querySelector('#studio').scrollIntoView({behavior:'smooth'});
   } else if(b.dataset.nav==='Explore'){
@@ -103,6 +122,15 @@ function getDimensions(ratio){
   return {w:1280,h:720};
 }
 
+function fileToBase64(file){
+  return new Promise((resolve,reject)=>{
+    const reader=new FileReader();
+    reader.onload=()=>resolve(reader.result.split(',')[1]);
+    reader.onerror=reject;
+    reader.readAsDataURL(file);
+  });
+}
+
 document.querySelector('#generate').addEventListener('click', async()=>{
   const prompt=promptBox.value.trim();
   statusBox.style.display='block';
@@ -111,49 +139,107 @@ document.querySelector('#generate').addEventListener('click', async()=>{
     promptBox.focus();
     return;
   }
-  const imageInput=document.querySelector('#imageFile');
-  if(currentMode==='Image to Video'&&!imageInput.files.length){
-    statusBox.textContent='Please choose an image first.';
-    return;
-  }
 
   const style=document.querySelector('#style').value;
   const ratio=document.querySelector('#ratio').value;
-  const model=document.querySelector('#quality').value;
-  const {w,h}=getDimensions(ratio);
-  const fullPrompt=`${prompt}, ${style} style, high detail, masterpiece`;
-  const seed=Math.floor(Math.random()*1000000);
-  const imageUrl=`https://image.pollinations.ai/prompt/${encodeURIComponent(fullPrompt)}?width=${w}&height=${h}&model=${model}&seed=${seed}&nologo=true`;
-
+  const fullPrompt=`${prompt}, ${style} style, high detail, smooth motion`;
   const button=document.querySelector('#generate');
   button.disabled=true;
-  button.textContent='✦ Generating AI creation…';
-  statusBox.textContent='Generating your image with AI… (usually takes 5–15 seconds)';
+
+  // 1. IMAGE MODE (100% Free, No API Token Needed)
+  if(currentMode==='AI Image Generator'){
+    const {w,h}=getDimensions(ratio);
+    const seed=Math.floor(Math.random()*1000000);
+    const imageUrl=`https://image.pollinations.ai/prompt/${encodeURIComponent(fullPrompt)}?width=${w}&height=${h}&model=flux&seed=${seed}&nologo=true`;
+    button.textContent='✦ Generating AI image…';
+    statusBox.textContent='Generating your image… (usually 5–15 seconds)';
+    try {
+      const img=new Image();
+      img.crossOrigin='anonymous';
+      await new Promise((resolve,reject)=>{
+        img.onload=resolve;
+        img.onerror=()=>reject(new Error('Image server busy. Please click Generate again.'));
+        img.src=imageUrl;
+      });
+      savedCreations.unshift({type:'image',prompt,url:imageUrl});
+      statusBox.innerHTML=`<div>✨ Image generated successfully!</div><div class="output-box"><img src="${imageUrl}" alt="Generated AI image"><a class="download-btn" href="${imageUrl}" download="freestudio-ai-${seed}.jpg" target="_blank" rel="noopener">⬇ Download Full Image</a></div>`;
+    } catch(err){
+      statusBox.textContent='Could not generate image: '+err.message;
+    } finally {
+      button.disabled=false;
+      button.textContent='✦  Generate';
+    }
+    return;
+  }
+
+  // 2. VIDEO MODES (Text to Video, Image to Video, Micro-Drama)
+  const imageInput=document.querySelector('#imageFile');
+  if(currentMode==='Image to Video'&&!imageInput.files.length){
+    statusBox.textContent='Please choose an image first for Image to Video.';
+    button.disabled=false;
+    return;
+  }
+
+  const token=tokenInput.value.trim();
+  const customUrl=customUrlInput.value.trim();
+  if(!token && !customUrl){
+    statusBox.innerHTML='⚠️ <b>API Token needed for video:</b> Paste your free Hugging Face token (<code>hf_...</code>) in the field above, or switch to <b>AI Image Generator</b> mode for instant keyless images.';
+    tokenInput.focus();
+    button.disabled=false;
+    return;
+  }
+
+  const selectedModel=document.querySelector('#quality').value==='flux'?'Wan-AI/Wan2.1-T2V-1.3B':document.querySelector('#quality').value;
+  const endpoint=customUrl || `https://router.huggingface.co/hf-inference/models/${selectedModel}`;
+
+  button.textContent='🎬 Rendering AI video…';
+  statusBox.textContent='Sending request to video AI model… (Video rendering usually takes 30–90 seconds. Please keep this tab open.)';
 
   try {
-    const img=new Image();
-    img.crossOrigin='anonymous';
-    await new Promise((resolve,reject)=>{
-      img.onload=resolve;
-      img.onerror=()=>reject(new Error('AI image server was busy. Please click Generate again.'));
-      img.src=imageUrl;
+    const payload={inputs:fullPrompt};
+    if(currentMode==='Image to Video' && imageInput.files.length){
+      payload.image=await fileToBase64(imageInput.files[0]);
+    }
+
+    const headers={'Content-Type':'application/json'};
+    if(token) headers['Authorization']=`Bearer ${token}`;
+
+    const response=await fetch(endpoint,{
+      method:'POST',
+      headers,
+      body:JSON.stringify(payload)
     });
 
-    savedCreations.unshift({prompt,url:imageUrl});
+    if(!response.ok){
+      let errMsg=`Server returned ${response.status}`;
+      try{
+        const errJson=await response.json();
+        if(errJson.error) errMsg=errJson.error;
+      }catch(_){}
+      throw new Error(errMsg);
+    }
 
-    const modeNote=currentMode==='AI Image Generator'
-      ? '✨ Generated successfully!'
-      : `✨ Generated high-resolution ${currentMode} keyframe preview! (Full multi-second MP4 rendering requires a GPU backend server.)`;
+    const contentType=response.headers.get('content-type')||'';
+    let videoUrl='';
+    if(contentType.includes('application/json')){
+      const json=await response.json();
+      videoUrl=json.video_url || json.url || (json.data && json.data[0]);
+      if(!videoUrl) throw new Error('API responded without a video file URL.');
+    } else {
+      const videoBlob=await response.blob();
+      videoUrl=URL.createObjectURL(videoBlob);
+    }
 
+    savedCreations.unshift({type:'video',prompt,url:videoUrl});
     statusBox.innerHTML=`
-      <div>${modeNote}</div>
+      <div>🎬 Video generated successfully!</div>
       <div class="output-box">
-        <img src="${imageUrl}" alt="Generated AI image">
-        <a class="download-btn" href="${imageUrl}" download="freestudio-ai-${seed}.jpg" target="_blank" rel="noopener">⬇ Open / Download Full Image</a>
+        <video src="${videoUrl}" controls autoplay loop muted playsinline></video>
+        <a class="download-btn" href="${videoUrl}" download="freestudio-ai-video.mp4">⬇ Download MP4 Video</a>
       </div>
     `;
   } catch(error) {
-    statusBox.textContent='Could not generate: '+error.message;
+    statusBox.textContent='Video generation error: '+error.message+' (If the model is cold-starting on Hugging Face, wait 20 seconds and click Generate again.)';
   } finally {
     button.disabled=false;
     button.textContent='✦  Generate';
@@ -162,12 +248,11 @@ document.querySelector('#generate').addEventListener('click', async()=>{
 
 document.querySelector('#viewMore').addEventListener('click',()=>{
   const extras=[
-    'Cyberpunk street food market in Tokyo at midnight, glowing neon signs, 8k cinematic',
-    'Astronaut floating inside a bioluminescent alien jungle, surreal fantasy art',
-    'Cozy wooden cabin beside a mountain lake during autumn sunset, photorealistic'
+    'Cyberpunk street food market in Tokyo at midnight, glowing neon signs, slow camera pan, cinematic',
+    'Astronaut floating inside a bioluminescent alien jungle, surreal fantasy film scene',
+    'Cozy wooden cabin beside a mountain lake during autumn sunset, gentle smoke rising from chimney'
   ];
-  const pick=extras[Math.floor(Math.random()*extras.length)];
-  promptBox.value=pick;
+  promptBox.value=extras[Math.floor(Math.random()*extras.length)];
   document.querySelector('#studio').scrollIntoView({behavior:'smooth'});
   promptBox.focus();
 });
