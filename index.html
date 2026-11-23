@@ -62,7 +62,6 @@ const modes=[...document.querySelectorAll('.mode')], promptBox=document.querySel
 let currentMode='Text to Video';
 const savedCreations=[];
 
-// Restore saved token locally in user's own browser only
 tokenInput.value=localStorage.getItem('fs_hf_token')||'';
 customUrlInput.value=localStorage.getItem('fs_custom_url')||'';
 tokenInput.addEventListener('input',()=>localStorage.setItem('fs_hf_token',tokenInput.value.trim()));
@@ -146,7 +145,6 @@ document.querySelector('#generate').addEventListener('click', async()=>{
   const button=document.querySelector('#generate');
   button.disabled=true;
 
-  // 1. IMAGE MODE (100% Free, No API Token Needed)
   if(currentMode==='AI Image Generator'){
     const {w,h}=getDimensions(ratio);
     const seed=Math.floor(Math.random()*1000000);
@@ -172,7 +170,6 @@ document.querySelector('#generate').addEventListener('click', async()=>{
     return;
   }
 
-  // 2. VIDEO MODES (Text to Video, Image to Video, Micro-Drama)
   const imageInput=document.querySelector('#imageFile');
   if(currentMode==='Image to Video'&&!imageInput.files.length){
     statusBox.textContent='Please choose an image first for Image to Video.';
